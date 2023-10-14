@@ -1,0 +1,95 @@
+{
+    "products" : [
+        {
+            "_id": "650d08659111bb5db7a4900c",
+            "title": "hello movie",
+            "price": 150,
+            "ratting": 1,
+            "categary": "run",
+            "description": "hellosbdsfh jhfhdskjfd shfdkjhjds ",
+            "__v": 0
+        },
+        {
+            "_id": "650d083a9111bb5db7a4900a",
+            "title": "new movie",
+            "price": 10,
+            "ratting": 1.8,
+            "categary": "jump",
+            "description": "hellosbdsfh jhfhdskjfd shfdkjhjds ",
+            "__v": 0
+        },
+        {
+            "_id": "650d08b29111bb5db7a49012",
+            "title": "nigahe",
+            "price": 280,
+            "ratting": 2.2,
+            "categary": "love",
+            "description": "hellosbdsfh jhfhdskjfd shfdkjhjds ",
+            "__v": 0
+        },
+        {
+            "_id": "650d07999111bb5db7a49004",
+            "title": "abc",
+            "price": 2000,
+            "ratting": 3.2,
+            "categary": "action",
+            "description": "hellosbdsfh jhfhdskjfd shfdkjhjds ",
+            "__v": 0
+        },
+        {
+            "_id": "650d07ba9111bb5db7a49006",
+            "title": "bcd",
+            "price": 2000,
+            "ratting": 3.2,
+            "categary": "fight",
+            "description": "hellosbdsfh jhfhdskjfd shfdkjhjds ",
+            "__v": 0
+        },
+        {
+            "_id": "650d07d99111bb5db7a49008",
+            "title": "cdefgg",
+            "price": 300,
+            "ratting": 3.8,
+            "categary": "fight",
+            "description": "hellosbdsfh jhfhdskjfd shfdkjhjds ",
+            "__v": 0
+        },
+        {
+            "_id": "650d08979111bb5db7a49010",
+            "title": "gaddar2",
+            "price": 80,
+            "ratting": 4,
+            "categary": "love",
+            "description": "hellosbdsfh jhfhdskjfd shfdkjhjds ",
+            "__v": 0
+        },
+        {
+            "_id": "650d08849111bb5db7a4900e",
+            "title": "gaddar",
+            "price": 900,
+            "ratting": 5,
+            "categary": "love",
+            "description": "hellosbdsfh jhfhdskjfd shfdkjhjds ",
+            "__v": 0
+        },
+        {
+            "_id": "650d08cf9111bb5db7a49014",
+            "title": "aag",
+            "price": 456,
+            "ratting": 6.2,
+            "categary": "run",
+            "description": "hellosbdsfh jhfhdskjfd shfdkjhjds ",
+            "__v": 0
+        },
+        {
+            "_id": "650d08f99111bb5db7a49016",
+            "title": "mirzapur",
+            "price": 200,
+            "ratting": 9.2,
+            "categary": "action",
+            "description": "hellosbdsfh jhfhdskjfd shfdkjhjds ",
+            "__v": 0
+        }
+
+    ]
+}
