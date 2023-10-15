@@ -5,11 +5,11 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function BasicSelect({setSortBy, data}) {
-  const [age, setAge] = React.useState('');
+export default function BasicSelect({setSortBy, data, sortBy}) {
+ // const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+   //setAge(event.target.value);
      setSortBy(event.target.value)
   };
 
@@ -22,7 +22,7 @@ export default function BasicSelect({setSortBy, data}) {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={age}
+          value={sortBy}
           label="Age"
           onChange={handleChange}
         >

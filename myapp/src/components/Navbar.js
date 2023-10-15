@@ -56,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function PrimarySearchAppBar({setSearchText}) {
+export default function PrimarySearchAppBar({setSearchText, searchText}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -183,6 +183,7 @@ export default function PrimarySearchAppBar({setSearchText}) {
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
               onChange={(e)=>{ setSearchText(e.target.value)}}
+              value={searchText}
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />

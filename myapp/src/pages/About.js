@@ -10,7 +10,7 @@ import  axios   from "axios"
 function About() {
        const [data, setData] = useState([]);
        const [searchText, setSearchText] = useState("");
-       const [categary, setCategary] = useState("");
+       const [categary, setCategary] = useState([]);
        const [sortBy, setSortBy] = useState("ratting");
        const [sortOrder, setSortOrder] = useState("asc")
        const [page, setPage] = useState(1);
@@ -34,12 +34,12 @@ function About() {
    console.log("rrrr", data)
   return (
     <div>
-        <PrimarySearchAppBar setSearchText={setSearchText} />
+        <PrimarySearchAppBar setSearchText={setSearchText} searchText={searchText} />
 
         <div style={{display : "flex", justifyContent : "space-evenly", marginTop :"10px", marginBottom : "10px"}}>
-             <MultipleSelectCheckmarks setCategary={setCategary} />
-             <BasicSelect setSortBy={setSortBy} data={sortByData} />
-             <BasicSelect  setSortBy={setSortOrder} data={sortOrderData} />
+             <MultipleSelectCheckmarks setCategary={setCategary} categary={categary} />
+             <BasicSelect setSortBy={setSortBy} data={sortByData} sortBy={sortBy} />
+             <BasicSelect  setSortBy={setSortOrder} data={sortOrderData} sortBy={sortOrder} />
         </div>
          
          <div style={{display : "flex", justifyContent : "space-evenly", flexWrap :"wrap"}}>
@@ -54,7 +54,7 @@ function About() {
          </div>
         
         <div style={{marginTop : "10px", float : "left", marginLeft : "30px", marginBottom :"20px"}}>
-              <PaginationRounded totalpage={10} setPage={setPage} />
+              <PaginationRounded totalpage={10} setPage={setPage} page={page} />
         </div>
          
          <Footer/>

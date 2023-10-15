@@ -22,17 +22,17 @@ const names = [
   "action", "fight", "jump", "run", "gadder", "love"
 ];
 
-export default function MultipleSelectCheckmarks({setCategary}) {
-  const [personName, setPersonName] = React.useState([]);
+export default function MultipleSelectCheckmarks({setCategary, categary}) {
+ // const [personName, setPersonName] = React.useState([]);
 
   const handleChange = (event) => {
     const {
       target: { value },
     } = event;
-    setPersonName(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
-    );
+    // setPersonName(
+    //   // On autofill we get a stringified value.
+    //   typeof value === 'string' ? value.split(',') : value,
+    // );
 
      setCategary(typeof value === 'string' ? value.split(',') : value,)
 
@@ -46,7 +46,7 @@ export default function MultipleSelectCheckmarks({setCategary}) {
           labelId="demo-multiple-checkbox-label"
           id="demo-multiple-checkbox"
           multiple
-          value={personName}
+          value={categary}
           onChange={handleChange}
           input={<OutlinedInput label="Tag" />}
           renderValue={(selected) => selected.join(', ')}
@@ -54,7 +54,7 @@ export default function MultipleSelectCheckmarks({setCategary}) {
         >
           {names.map((name) => (
             <MenuItem key={name} value={name}>
-              <Checkbox checked={personName.indexOf(name) > -1} />
+              <Checkbox checked={categary.indexOf(name) > -1} />
               <ListItemText primary={name} />
             </MenuItem>
           ))}
