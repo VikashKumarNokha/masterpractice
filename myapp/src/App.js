@@ -6,6 +6,7 @@ import About from './pages/About';
 import Details from './pages/Details';
 import SignIn from './pages/Login';
 import SignUp from './pages/Register';
+import IsAuth from './components/IsAuth';
 
 function App() {
   
@@ -13,9 +14,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/details" element={<Details/>} />
+          <Route path="/" element={ <IsAuth>  <Home/> </IsAuth>  } />
+          <Route path="/about" element={ <IsAuth> <About/> </IsAuth>} />
+          <Route path="/details" element={ <IsAuth> <Details/>  </IsAuth> } />
           <Route path="/login" element={<SignIn/>} />
           <Route path="/register" element={<SignUp/>} />
        </Routes>

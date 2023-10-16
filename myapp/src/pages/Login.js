@@ -12,6 +12,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate, Link as NavLink} from "react-router-dom"
+
 
 function Copyright(props) {
   return (
@@ -31,9 +33,23 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignIn() {
+    const navigate = useNavigate()
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+     
+     let regDetails = JSON.parse( localStorage.getItem("register") );
+       if(regDetails){
+        if(regDetails?.email == data.get('email') && regDetails?.password == data.get('password')  ){
+          localStorage.setItem("register", JSON.stringify( {...regDetails, login : true} ))
+          navigate("/")
+        }else{
+          alert("Please enter correct email and password")
+        }
+      }else{
+         alert("Please register first")
+      }
+
     console.log({
       email: data.get('email'),
       password: data.get('password'),
@@ -98,9 +114,11 @@ export default function SignIn() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                {/* <Link href="" variant="body2"> */}
+                  <NavLink to={"/register"}> 
                   {"Don't have an account? Sign Up"}
-                </Link>
+                  </NavLink>
+                {/* </Link> */}
               </Grid>
             </Grid>
           </Box>
