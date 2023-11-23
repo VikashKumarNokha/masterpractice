@@ -6,7 +6,7 @@ import MediaCard from '../components/Card'
 import PaginationRounded from '../components/Pagination'
 import Footer from '../components/Footer'
 import  axios   from "axios"
-import  {useSearchParams, useLocation}  from "react-router-dom"
+import  {useSearchParams, useLocation, Navigate, useNavigate}  from "react-router-dom"
  
 function Home() {
        const [ searchParams, setSearchParams] = useSearchParams();
@@ -17,6 +17,7 @@ function Home() {
        const [sortOrder, setSortOrder] = useState( searchParams.getAll("sortOrder")[0] || "");
        const [page, setPage] = useState( Number( searchParams.getAll("page")[0] ) ||  1);
        
+       const navi = useNavigate();
        
        useEffect(()=>{
         let obj = {}
@@ -50,9 +51,13 @@ function Home() {
          })
    }
 
-  // console.log("rrrr", data)
+     function navfun(e){
+       console.log("sss",e)
+        console.log("aaa",`/${e._id}`)
+         // return <Navigate to={`/${e._id}`} replace={true} />
+           navi(`/${e._id}`);
+     }
 
-   console.log("sss", searchParams.getAll("sort"))
 
   return (
     <div>
@@ -67,7 +72,7 @@ function Home() {
          <div style={{display : "flex", justifyContent : "space-evenly", flexWrap :"wrap"}}>
             {
               data?.data?.length > 0 && data.data.map((e,i)=>{
-                  return  <div key={i} style={{margin : "10px"}}> 
+                  return  <div onClick={()=>navfun(e)} key={i} style={{margin : "10px", cursor :"pointer"}}> 
                   <MediaCard data={e} />
                   </div> 
               })

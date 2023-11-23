@@ -18,7 +18,7 @@ function App() {
        <Routes>
           <Route path="/" element={ <IsAuth>  <Home/> </IsAuth>  } />
           <Route path="/about" element={ <IsAuth> <About/> </IsAuth>} />
-          <Route path="/details" element={ <IsAuth> <Details/>  </IsAuth> } />
+          <Route path="/:id" element={ <IsAuth> <Details/>  </IsAuth> } />
           <Route path="/searchfun" element={ <IsAuth> <SearchFunWithoutQuery/>  </IsAuth> } />
           <Route path="/multiselect" element={ <IsAuth> <SideMultipleSelect/>  </IsAuth> } />
           <Route path="/login" element={<SignIn/>} />
